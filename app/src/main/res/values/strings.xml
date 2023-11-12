@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">E-Commerce App</string>
+    <string name="login">Login</string>
+    <string name="orLogin">Or login with social accounts</string>
+    <string name="forgetPass">Forget Your Password?</string>
+    <string name="signup">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="orSignup">Or signup with social accounts</string>
+    <string name="enterEmail">Please, enter your email address. You will receive a link to create a new password via email.</string>
+    <string name="forgotPass">Forgot Password</string>
+    <string name="send">Send</string>
+    <string name="haveAcc">"Already have an account?"</string>
 </resources>
