@@ -12,4 +12,8 @@
     <string name="forgotPass">Forgot Password</string>
     <string name="send">Send</string>
     <string name="haveAcc">"Already have an account?"</string>
+    <string name="fashionsale">Fashion\nsale</string>
+    <string name="check">check</string>
+    <string name="New">New</string>
+    <string name="neverSee">You\'ve never seen it before</string>
 </resources>

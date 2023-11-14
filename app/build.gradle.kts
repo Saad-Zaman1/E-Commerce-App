@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
+    id("com.google.gms.google-services")
 
 }
 
@@ -55,6 +56,7 @@ android {
 dependencies {
     //Hilt DI
     implementation("com.google.dagger:hilt-android:2.48")
+    implementation("com.google.firebase:firebase-auth:22.2.0")
     ksp("com.google.dagger:dagger-compiler:2.48")
     ksp("com.google.dagger:hilt-compiler:2.48")
 
@@ -74,7 +76,8 @@ dependencies {
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
-
+    //lottie
+    implementation("com.airbnb.android:lottie-compose:6.1.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")

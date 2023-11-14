@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.saad.e_commerceapp.screens.HomeScreen
 import com.saad.e_commerceapp.screens.authentication.ForgetPasswordScreen
 import com.saad.e_commerceapp.screens.authentication.LoginScreen
 import com.saad.e_commerceapp.screens.authentication.SignUpScreen
@@ -32,7 +33,10 @@ fun App() {
             SignUpScreen(navController)
         }
         composable(route = "forgetPass") {
-            ForgetPasswordScreen()
+            ForgetPasswordScreen(navController)
+        }
+        composable("homeScreen"){
+            HomeScreen()
         }
     }
 }
