@@ -5,11 +5,13 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,12 +31,16 @@ import com.saad.e_commerceapp.screens.components.imageShowCaseItem
 
 @Composable
 fun HomeScreen() {
-    Column {
+    Column(
+        modifier = Modifier
+            .verticalScroll(rememberScrollState())
+    ) {
         Box(
             modifier = Modifier
                 .background(Color.Gray)
                 .fillMaxWidth(1f)
-                .fillMaxHeight(.7f)
+                .height(530.dp)
+//                .fillMaxHeight(.2f)
 
 
         ) {
@@ -73,15 +79,6 @@ fun HomeScreen() {
             }
 
         }
-        HorizontalItem()
-    }
-
-
-}
-
-@Composable
-fun HorizontalItem() {
-    Column {
 
         TitleText(
             text = stringResource(id = R.string.New),
@@ -93,12 +90,16 @@ fun HorizontalItem() {
         )
         TitleText(
             text = stringResource(id = R.string.neverSee),
-            modifier = Modifier.padding(start = 15.dp, top = 0.dp),
+            modifier = Modifier.padding(start = 15.dp, top = 0.dp, bottom = 10.dp),
             style = TextStyle(
                 fontFamily = FontFamily(Font(R.font.montserratlight)),
                 color = Color.Gray
             )
         )
-        imageShowCaseItem()
+        imageShowCaseItem(stringResource(id = R.string.New), R.drawable.main1)
+
+//        HorizontalItem()
     }
+
+
 }
