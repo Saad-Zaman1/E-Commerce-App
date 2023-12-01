@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.sp
 import com.saad.e_commerceapp.R
 import com.saad.e_commerceapp.screens.components.MainButton
 import com.saad.e_commerceapp.screens.components.TitleText
-import com.saad.e_commerceapp.screens.components.imageShowCaseItem
+import com.saad.e_commerceapp.screens.components.imageShowCaseListItem
 
 @Composable
 fun HomeScreen() {
@@ -39,10 +39,7 @@ fun HomeScreen() {
             modifier = Modifier
                 .background(Color.Gray)
                 .fillMaxWidth(1f)
-                .height(530.dp)
-//                .fillMaxHeight(.2f)
-
-
+                .height(500.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.main1),
@@ -96,10 +93,6 @@ fun HomeScreen() {
                 color = Color.Gray
             )
         )
-        imageShowCaseItem(stringResource(id = R.string.New), R.drawable.main1)
-
-//        HorizontalItem()
+        imageShowCaseListItem(text = stringResource(id = R.string.New), image = R.drawable.main1)
     }
-
-
 }

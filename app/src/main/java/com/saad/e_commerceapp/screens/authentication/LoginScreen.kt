@@ -89,7 +89,7 @@ fun GetLoginInfo(navController: NavController) {
                 .padding(0.dp, 10.dp)
 
         ) {
-            navController.navigate("homeScreen") {
+            navController.navigate("home") {
                 popUpTo("login") {
                     inclusive = true
                 }

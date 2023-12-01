@@ -4,6 +4,7 @@ plugins {
     id("com.google.devtools.ksp")
     id("dagger.hilt.android.plugin")
     id("com.google.gms.google-services")
+    id("io.realm.kotlin")
 
 }
 
@@ -78,6 +79,16 @@ dependencies {
 
     //lottie
     implementation("com.airbnb.android:lottie-compose:6.1.0")
+
+    //workmanager
+    implementation("androidx.work:work-runtime:2.8.1")
+
+    //MongoDB Realm
+    implementation("io.realm.kotlin:library-base:1.11.0")
+
+    //Desugaring
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.2")
+
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")

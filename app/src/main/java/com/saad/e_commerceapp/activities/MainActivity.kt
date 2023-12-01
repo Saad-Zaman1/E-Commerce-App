@@ -7,16 +7,25 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.saad.e_commerceapp.screens.HomeScreen
 import com.saad.e_commerceapp.screens.authentication.ForgetPasswordScreen
 import com.saad.e_commerceapp.screens.authentication.LoginScreen
 import com.saad.e_commerceapp.screens.authentication.SignUpScreen
+import com.saad.e_commerceapp.screens.bottomnav.AppNavigation
+import dagger.hilt.android.AndroidEntryPoint
 
+const val a = 10
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            App()
+
+            if (a == 10) {
+                App()
+            } else {
+                AppNavigation()
+            }
         }
     }
 }
@@ -35,8 +44,8 @@ fun App() {
         composable(route = "forgetPass") {
             ForgetPasswordScreen(navController)
         }
-        composable("homeScreen"){
-            HomeScreen()
+        composable("home") {
+            AppNavigation()
         }
     }
 }
