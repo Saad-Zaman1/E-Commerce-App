@@ -513,7 +513,7 @@ fun imageShowCaseListItem(text: String, image: Int) {
                 modifier = Modifier
                     .clip(CircleShape)
                     .background(Color.White)
-                // Add a shadow modifier to create a shadow
+                // Add a shadow modifier to create a shadow in the app
                 ,
                 checked = isFavorite,
                 onCheckedChange = {
